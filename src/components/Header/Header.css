@@ -1,0 +1,36 @@
+.header {
+  height: 80px;
+  width: 100vw;
+  background-color: var(--dark);
+  color: white;
+  overflow: hidden;
+}
+.header .container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.header .container .left,
+.header .container .center,
+.header .container .right {
+  flex: 1;
+  display: flex;
+}
+.header .container .left .logo img{
+  height: 200px;
+  width: auto;
+}
+
+.header .container .center a {
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.header .container .right{
+    justify-content: flex-end;
+}
+.signIn,
+.signUp {
+ 
+}

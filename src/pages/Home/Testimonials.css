@@ -1,0 +1,31 @@
+.testimonials{
+
+}
+.testimonials .caurosel{
+    width: 100%;
+
+}
+.testimonials h2{
+    text-align: center;
+    font-size: 38px;
+    padding: 20px;
+    color: var(--gray);
+}
+.testimonials h4{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--yellow);
+}
+.testimonial{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.testimonial p{
+    text-align: center;
+}
+.testimonial .username{
+}
