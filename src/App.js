@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Shop from "./pages/Home/Shop/Shop";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/shop" element={<Shop />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/cart" element={<Cart />} />
         </Routes>
       </Router>
     </div>
