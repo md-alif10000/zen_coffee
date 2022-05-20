@@ -9,6 +9,13 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+.shop .container h2{
+    font-size: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0;
+    word-spacing: 10px;
+}
 .shop .container .products .item {
   width: 400px;
   display: flex;

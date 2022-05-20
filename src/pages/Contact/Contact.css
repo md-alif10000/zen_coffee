@@ -1,0 +1,80 @@
+.contact {
+}
+.contact h1 {
+  font-size: 48px;
+  padding: 20px 0;
+}
+.contact .form_container {
+  display: flex;
+  padding: 4vw;
+  justify-content: space-around;
+}
+.contact .form_container .left form {
+  display: flex;
+  flex-direction: column;
+}
+.contact .form_container .left form .input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.contact .form_container .left form .input input {
+  width: 100%;
+  height: 40px;
+  padding: 5px 10px;
+  font-size: 17px;
+  letter-spacing: 0.6px;
+}
+.contact .form_container .left form .input input:focus {
+  outline: 2px solid var(--yellow);
+}
+.contact .form_container .left form button {
+  height: 40px;
+  font-size: 18px;
+  margin: 10px 0;
+  background-color: var(--yellow);
+}
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right img {
+  width: 500px;
+  height: auto;
+}
+.infos {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 0;
+}
+.infos .info {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+}
+.infos .info .title {
+  color: var(--yellow);
+  font-size: 24px;
+}
+.infos .info p {
+  color: var(--gray);
+  text-align: center;
+}
+.findUs{
+    display: flex;
+    padding: 50px 0;
+
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.findUs iframe {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 2px solid var(--gray);
+  width: 1000px;
+  height: 400px;
+}

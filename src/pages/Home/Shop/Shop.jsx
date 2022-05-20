@@ -10,7 +10,7 @@ const Shop = () => {
         <div className="banner"></div>
 
         <div className="container">
-          <h2></h2>
+          <h2>Choose yourself</h2>
           <div className="products">
 
               {[1,2,3,4,5,6,7,8,9,10].map((item,index)=><ProductCard key={index} />)}

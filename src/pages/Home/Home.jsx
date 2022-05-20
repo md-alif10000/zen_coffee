@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Blogs from "./Blogs";
 import "./Home.css";
@@ -22,21 +23,12 @@ const Home = () => {
         </h1>
         <div className="items">
           <div className="item">
-          <div className="imageContainer">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9IGIFGSn6NnfPF0IYt5POglMcN9fe6QQSWA&usqp=CAU" alt="" />
+            <div className="imageContainer">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9IGIFGSn6NnfPF0IYt5POglMcN9fe6QQSWA&usqp=CAU"
+                alt=""
+              />
             </div>
-
-            <h3>Section Title</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
-              fugiat odio, at alias quia optio!
-            </p>
-          </div>
-          <div className="item">
-          <div className="imageContainer">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9IGIFGSn6NnfPF0IYt5POglMcN9fe6QQSWA&usqp=CAU" alt="" />
-            </div>
-
 
             <h3>Section Title</h3>
             <p>
@@ -46,7 +38,24 @@ const Home = () => {
           </div>
           <div className="item">
             <div className="imageContainer">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9IGIFGSn6NnfPF0IYt5POglMcN9fe6QQSWA&usqp=CAU" alt="" />
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9IGIFGSn6NnfPF0IYt5POglMcN9fe6QQSWA&usqp=CAU"
+                alt=""
+              />
+            </div>
+
+            <h3>Section Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
+              fugiat odio, at alias quia optio!
+            </p>
+          </div>
+          <div className="item">
+            <div className="imageContainer">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9IGIFGSn6NnfPF0IYt5POglMcN9fe6QQSWA&usqp=CAU"
+                alt=""
+              />
             </div>
 
             <h3>Section Title</h3>
@@ -73,9 +82,13 @@ const Home = () => {
             />
           </div>
           <div className="right">
-          <h2 className="title">Get your coffee now</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae illo vero itaque doloribus numquam accusamus expedita repellat cumque quibusdam dignissimos!</p>
-            <Link to="/"  className="button primary">
+            <h2 className="title">Get your coffee now</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Recusandae illo vero itaque doloribus numquam accusamus expedita
+              repellat cumque quibusdam dignissimos!
+            </p>
+            <Link to="/" className="button primary">
               GET NOW
             </Link>
           </div>
@@ -89,33 +102,34 @@ const Home = () => {
           </div>
           <div className="right">
             <h2 className="title">Get your coffee now</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae illo vero itaque doloribus numquam accusamus expedita repellat cumque quibusdam dignissimos!</p>
-            <Link to="/"  className="button primary">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Recusandae illo vero itaque doloribus numquam accusamus expedita
+              repellat cumque quibusdam dignissimos!
+            </p>
+            <Link to="/" className="button primary">
               GET NOW
             </Link>
-
           </div>
         </div>
       </div>
 
-      <Testimonials/>
+      <Testimonials />
 
-      <Blogs/>
+      <Blogs />
 
       <div className="newsletter">
         <div className="container">
-        <h3>Subscribe to our newsletter</h3>
+          <h3>Subscribe to our newsletter</h3>
 
           <div className="inputBox">
             <input type="text" />
-            <button className="button primary" >JOIN</button>
+            <button className="button primary">JOIN</button>
           </div>
-
         </div>
-
       </div>
 
-
+      <Footer />
     </div>
   );
 };
