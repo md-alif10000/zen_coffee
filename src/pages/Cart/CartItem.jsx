@@ -7,7 +7,7 @@ import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 const CartItem = () => {
   return (
-    <Paper elevation={1} className="cartItem">
+    <Paper elevation={2} className="cartItem">
       <h3 className="title">ZEN specialty coffee</h3>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
       <div>

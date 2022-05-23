@@ -1,5 +1,7 @@
 footer{
     width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
     background-color: var(--dark);
     overflow: hidden;
     color: white;
@@ -29,9 +31,19 @@ footer .container .top .links a{
 }
 
 footer > .container >.bottom{
-    height: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-top: 2px solid var(--gray);
+}
+
+
+@media screen and (max-width:600px) {
+    footer .container .top{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    
 }

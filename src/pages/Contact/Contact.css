@@ -1,4 +1,6 @@
 .contact {
+  width: 100vw;
+  overflow: hidden;
 }
 .contact h1 {
   font-size: 48px;
@@ -47,6 +49,7 @@
   display: flex;
   justify-content: space-around;
   padding: 50px 0;
+  flex-wrap: wrap;
 }
 .infos .info {
   display: flex;
@@ -62,14 +65,13 @@
   color: var(--gray);
   text-align: center;
 }
-.findUs{
-    display: flex;
-    padding: 50px 0;
+.findUs {
+  display: flex;
+  padding: 50px 0;
 
-
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .findUs iframe {
   max-width: 1000px;
@@ -77,4 +79,34 @@
   border: 2px solid var(--gray);
   width: 1000px;
   height: 400px;
+}
+
+@media screen and (max-width: 600px) {
+  .contact .form_container {
+    flex-direction: column;
+  }
+
+  .contact .form_container .left {
+    align-items: center;
+    justify-content: center;
+  }
+  .contact .form_container .left form {
+    max-width: 75vw;
+    margin: 0 auto;
+  }
+  .contact .form_container .left form .input {
+    width: 100%;
+  }
+
+  .contact .form_container .right img {
+    width: 70vw;
+    height: auto;
+    margin: 30px;
+  }
+  .findUs {
+    padding: 10px;
+  }
+  .findUs iframe {
+    max-width: 80vw;
+  }
 }

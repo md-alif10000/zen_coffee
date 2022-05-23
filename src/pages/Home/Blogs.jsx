@@ -7,7 +7,7 @@ import "./Blogs.css";
 const Blogs = () => {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
-    { width: 550, itemsToShow: 1, itemsToScroll: 2, pagination: false },
+    { width: 600, itemsToShow: 1, itemsToScroll: 1, pagination: false },
     { width: 850, itemsToShow: 2 },
     { width: 1150, itemsToShow: 2, itemsToScroll: 2 },
     { width: 1450, itemsToShow: 2 },

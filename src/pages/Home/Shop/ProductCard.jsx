@@ -15,7 +15,7 @@ const ProductCard = () => {
             <p>Lorem ipsum dolor sit amet consectetur.</p>
 
             <ButtonGroup
-              color="primary"
+              color="secondary"
               variant="contained"
               aria-label="outlined primary button group"
             >
@@ -24,7 +24,7 @@ const ProductCard = () => {
               </Button>
 
               <Button fullWidth>6</Button>
-              <Button color="primary" >
+              <Button color="secondary" >
                 <AddCircleOutlineIcon />{" "}
               </Button>
             </ButtonGroup>

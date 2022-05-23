@@ -6,19 +6,36 @@ import reportWebVitals from "./reportWebVitals";
 
 import { createTheme } from "@mui/material/styles";
 import { green, purple } from "@mui/material/colors";
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from "@mui/material";
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#ffb74d",
+      main: "#dad26b",
     },
     secondary: {
       light: "#0066ff",
-      main: "#0044ff",
-      // dark: will be calculated from palette.secondary.main,
-      contrastText: "#ffcc00",
+      main: "#acb5b0",
+      contrastText: "#ffff",
     },
+  },
+  typography: {
+    fontFamily: [
+      "Titillium Web",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Arial",
+      "sans-serif",
+    ].join(","),
+    button: {
+      fontWeight: 600,
+    },
+    h3:{
+      fontWeight: 700,
+      textTransform:"uppercase",
+      letterSpacing:"2"
+
+    }
   },
 });
 

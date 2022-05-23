@@ -14,7 +14,7 @@ const Shop = () => {
           <h2>Choose yourself</h2>
           <Grid container spacing={2}>
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, index) => (
-              <Grid item xs={8} lg={4} key={index}>
+              <Grid item xs={12} lg={4} md={2} key={index}>
                 <ProductCard />
               </Grid>
             ))}

@@ -43,3 +43,12 @@
 .blogs .blog .bottom h3 {
   font-size: 28px;
 }
+@media screen and (max-width:600px) {
+  .blog{
+    width: 70vw;
+  }
+  .blogs .blog .top img{
+    height: 200px;
+  }
+  
+}

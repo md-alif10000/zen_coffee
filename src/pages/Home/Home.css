@@ -13,13 +13,14 @@
 }
 .specialities h1 {
   text-align: center;
-  font-size: 48px;
+  font-size: min(7vw, 48px);
 }
 .specialities .items {
   width: 100%;
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
+  flex-wrap: wrap;
 }
 .specialities .items .item {
   display: flex;
@@ -28,9 +29,9 @@
   padding: 20px;
   overflow: hidden;
 }
-.specialities .items .item .imageContainer{
-    width: 100%;
-    overflow: hidden;
+.specialities .items .item .imageContainer {
+  width: 100%;
+  overflow: hidden;
 }
 .specialities .items .item:hover img {
   transform: scale(1.1);
@@ -43,7 +44,7 @@
 }
 .secondary_banner {
   width: 100vw;
-  height: 400px;
+  height: min(400px, 30vh);
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(https://media.istockphoto.com/photos/cup-of-coffee-and-coffee-beans-in-a-sack-top-view-picture-id927414822?k=20&m=927414822&s=612x612&w=0&h=Oj9x5kyEsv_G3gl-7H-9ODFvT6KTDufPYSg7b1_Ip0s=);
@@ -58,30 +59,37 @@
 }
 .secondary_banner div h2 {
   color: var(--yellow);
-  font-size: 38px;
+  font-size: min(38px,10vw);
   text-transform: uppercase;
+  text-align: center;
 }
 .section-4 {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: 1000px;
 }
 .section-4 .item {
   display: flex;
   width: 100%;
   padding: 50px;
+  width: 100%;
+  align-items: center;
 }
 .section-4 .item .left img {
-  height: 400px;
-  width: 400px;
+  height: min(400px, 70vw);
+  width: min(400px, 70vw);
   object-fit: cover;
 }
 .section-4 .item .right {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: min(50px,3vw);
   justify-content: space-between;
+  align-items: center;
 }
+
 .section-4 .item:last-child {
   flex-direction: row-reverse;
 }
@@ -99,6 +107,7 @@
 .newsletter .container h3 {
   text-transform: uppercase;
   padding: 20px;
+  text-align: center;
 }
 
 .newsletter .container .inputBox {
@@ -120,4 +129,19 @@
   height: 100%;
   border: none;
   outline: none;
+}
+
+
+@media screen and (max-width:600px) {
+  .section-4 .item{
+    flex-direction: column;
+  }
+  .section-4 .item:last-child {
+    flex-direction: column;
+  }
+  .section-4 .item .right p{
+    padding: 10px;
+    text-align: center;
+  }
+  
 }

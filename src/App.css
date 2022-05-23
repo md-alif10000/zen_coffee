@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap");
 
-
 :root {
   --yellow: #dad26b;
   --dark: #0c1f23;
@@ -20,20 +19,21 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  max-width: 100vw;
 }
-a{
+a {
   text-decoration: none;
   color: inherit;
   transition: all 0.3s;
 }
-a:hover{
+a:hover {
   color: var(--yellow);
 }
 .container {
   max-width: 1400px;
   margin: 0 auto;
 }
-.button{
+.button {
   padding: 5px 10px;
   text-align: center;
   font-size: 16px;
@@ -42,26 +42,26 @@ a:hover{
   width: 120px;
   transition: all 0.3s;
 }
-.button.primary{
+.button.primary {
   background-color: var(--yellow);
   color: var(--dark);
 }
-.button.primary:hover{
+.button.primary:hover {
   background-color: var(--dark);
   color: var(--yellow);
 }
-.button.secondary{
+.button.secondary {
   background-color: var(--dark);
   color: var(--yellow);
 }
 
-.m-5{
+.m-5 {
   margin: 5px;
 }
-.mx-5{
+.mx-5 {
   margin: 0 5px;
 }
-.icon{
+.icon {
   font-size: 28px;
   margin: 5px;
 }
