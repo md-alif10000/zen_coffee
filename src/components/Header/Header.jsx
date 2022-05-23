@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import {AiOutlineShoppingCart} from 'react-icons/ai'
+import { Button, Stack } from "@mui/material";
 
 const Header = () => {
   return (
@@ -25,16 +26,21 @@ const Header = () => {
           <Link to="/">Wholesale</Link>
         </div>
         <div className="right">
-          <Link to={"/cart"}  >
+        <Link to={"/cart"} className="cartIcon" >
           <AiOutlineShoppingCart className="icon" />
           </Link>
-          <Link to="/" >
-            <span className="button primary mx-5">Sign in</span>
-          </Link>
+         
+          <Stack spacing={2}  direction="row" >
 
-          <Link to="/" >
-            <span className="button primary mx-5">Sign up</span>
-          </Link>
+         
+
+          <Button href="/login" variant="contained" >Login</Button>
+          <Button href="/sign-up" variant="contained">Sign UP</Button>
+
+          </Stack>
+         
+
+   
         </div>
       </div>
     </div>

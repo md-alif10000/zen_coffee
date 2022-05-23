@@ -1,3 +1,4 @@
+import { Button, Stack } from "@mui/material";
 import React from "react";
 import Layout from "../../components/Layout/Layout";
 import "./Contact.css";
@@ -10,6 +11,8 @@ const Contact = () => {
           <div className="left">
             <h1>Contact</h1>
             <form action="" className="form">
+              <Stack>
+
               <div className="input">
                 <label htmlFor="">Name</label>
                 <input type="text" />
@@ -26,7 +29,10 @@ const Contact = () => {
                 <label htmlFor="">Message</label>
                 <input type="text" />
               </div>
-              <button>SEND MESSAGE</button>
+              <Button variant="contained"  >SEND MESSAGE</Button>
+
+              </Stack>
+             
             </form>
           </div>
           <div className="right">

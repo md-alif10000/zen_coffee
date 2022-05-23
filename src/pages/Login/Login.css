@@ -1,0 +1,15 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login .loginFormContainer {
+  width: 90vw;
+  max-width: 400px;
+  padding: 20px;
+  /* background-color: var(--light_blue)!important; */
+  /* color: var(--yellow)!important; */
+}

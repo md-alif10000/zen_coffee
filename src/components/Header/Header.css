@@ -30,7 +30,7 @@
 .header .container .right{
     justify-content: flex-end;
 }
-.signIn,
-.signUp {
- 
+
+.header .container .right .cartIcon{
+  margin-right: 15px;
 }

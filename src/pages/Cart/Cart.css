@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   margin: 10px;
-  background-color: var(--gray);
+  background-color: var(--gray)!important;
   width: 400px;
 }
 .cartItem > div {
@@ -59,3 +59,14 @@
    text-transform: capitalize;
    font-weight: 500;
 }
+.subTotal{
+  margin: 10px;
+}
+.subTotal .subtotalContent{
+  padding: 20px;
+  width: 90vw;
+  max-width: 500px;
+
+
+}
+

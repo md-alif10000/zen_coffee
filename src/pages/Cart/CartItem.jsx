@@ -1,22 +1,34 @@
 import React from "react";
 import "./Cart.css";
 import { BsChevronUp, BsChevronDown } from "react-icons/bs";
+import { Button, ButtonGroup, Paper, Stack } from "@mui/material";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
 const CartItem = () => {
   return (
-    <div className="cartItem">
+    <Paper elevation={1} className="cartItem">
       <h3 className="title">ZEN specialty coffee</h3>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
       <div>
         <span className="remove">remove</span>{" "}
-        <div className="increase_decrease">
-          <span>5 </span>{" "}
-          <div>
-            <BsChevronUp className="increase" />{" "}
-            <BsChevronDown className="increase" />{" "}
-          </div>
-        </div>
+        <ButtonGroup
+          elevation={0}
+          color="primary"
+          variant="contained"
+          aria-label="button group"
+        >
+          <Button elevation={0} color="secondary">
+            <RemoveCircleOutlineIcon />
+          </Button>
+
+          <Button elevation={0}>6</Button>
+          <Button elevation={0} color="primary">
+            <AddCircleOutlineIcon />
+          </Button>
+        </ButtonGroup>
       </div>
-    </div>
+    </Paper>
   );
 };
 

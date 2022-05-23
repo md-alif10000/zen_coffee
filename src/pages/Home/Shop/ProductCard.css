@@ -1,0 +1,11 @@
+.productCard{
+    display: flex;
+    padding: 20px;
+}
+.productCard > div{
+    flex: 1;
+    padding: 10px;
+}
+.addCart{
+    margin: 0 10px;
+}
