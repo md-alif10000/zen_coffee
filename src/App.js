@@ -8,6 +8,7 @@ import Contact from "./pages/Contact/Contact";
 import Cart from "./pages/Cart/Cart";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
+import Checkout from "./pages/Checkout/Checkout";
 
 
 
@@ -24,6 +25,7 @@ function App() {
             <Route exact path="/cart" element={<Cart />} />
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/sign-up" element={<SignUp />} />
+            <Route exact path="/checkout" element={<Checkout />} />
           </Routes>
         </Router>
       </div>

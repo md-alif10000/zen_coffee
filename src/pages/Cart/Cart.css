@@ -16,7 +16,8 @@
   flex-direction: column;
   margin: 10px;
   background-color: var(--gray)!important;
-  width: 400px;
+  min-width: 300px;
+  flex: 1;
 }
 .cartItem > div {
   display: flex;

@@ -23,7 +23,7 @@ const CartItem = () => {
           </Button>
 
           <Button elevation={0}>6</Button>
-          <Button elevation={0} color="primary">
+          <Button elevation={0} color="secondary">
             <AddCircleOutlineIcon />
           </Button>
         </ButtonGroup>

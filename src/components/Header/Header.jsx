@@ -3,6 +3,7 @@ import "./Header.css";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Button, Drawer, List, ListItem, Stack, Link } from "@mui/material";
 import WidgetsIcon from "@mui/icons-material/Widgets";
+import { Link as RouterLink } from "react-router-dom";
 
 const Header = () => {
   const [drawerOpen, setdrawerOpen] = useState(false);
@@ -54,23 +55,23 @@ const Header = () => {
             <WidgetsIcon />
           </div>
           <div className="logo">
-            <Link to={"/"}>
+            <RouterLink to={"/"}>
               <img src="./images/logo.svg" alt="" />
-            </Link>
+            </RouterLink>
           </div>
         </div>
         <div className="center">
-          <Link to="/">Home</Link>
-          <Link to="/shop">Shop</Link>
-          <Link to="/about">About</Link>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/shop">Shop</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
 
-          <Link to="/contact">Contact</Link>
-          <Link to="/">Wholesale</Link>
+          <RouterLink to="/contact">Contact</RouterLink>
+          <RouterLink to="/">Wholesale</RouterLink>
         </div>
         <div className="right">
-          <Link to={"/cart"} className="cartIcon">
+          <RouterLink to={"/cart"} className="cartIcon">
             <AiOutlineShoppingCart className="icon" />
-          </Link>
+          </RouterLink>
 
           <Stack spacing={2} direction="row">
             <Button href="/login" variant="contained">

@@ -67,5 +67,31 @@ header {
   .menuIcon{
     display: inline-block;
   }
+  .header .container .right .MuiButton-root{
+    height: 40px!important;
+
+  
+}}
+
+@media screen and (max-width:380px) {
+  .header .container{
+    padding: 10px;
+
+  }
+  .header .container .left .logo img{
+    height: 120px;
+  }
+  .header .container .center{
+    display: none;
+  }
+  .menuIcon{
+    display: inline-block;
+  }
+  .header .container .right .MuiButton-root:last-child{
+  display: none;
+
   
 }
+   
+  }
+  

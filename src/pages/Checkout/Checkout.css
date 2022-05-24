@@ -1,0 +1,10 @@
+.checkout{
+    width: 100vw;
+    min-height: calc(100vh - 160px);
+    height: auto;
+    display: flex;align-items: center;
+    justify-content: center;
+}
+.checkout .checkoutContainer{
+    padding: 20px;
+}

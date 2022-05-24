@@ -31,7 +31,11 @@ const SignUp = () => {
             variant="filled"
           />
 
-          <Button color="primary" variant="contained" size="md" >Login</Button>
+          <Button color="primary" variant="contained" size="md" >Sign Up</Button>
+          <Typography textAlign="center" >Already have an account?</Typography>
+
+          <Button color="primary" href="/login"  variant="outlined" size="md" >Login</Button>
+
         </Stack>
       </Paper>
     </div>

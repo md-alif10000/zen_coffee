@@ -67,7 +67,7 @@ const Cart = () => {
                     </Stack>
                   </RadioGroup>
                 </FormControl>
-                <Button variant="contained" color="primary">
+                <Button href="/checkout" variant="contained" color="primary">
                   {" "}
                   Checkout{" "}
                 </Button>

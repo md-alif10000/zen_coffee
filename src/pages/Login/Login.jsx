@@ -22,6 +22,9 @@ const Login = () => {
           />
 
           <Button color="primary" variant="contained" size="md" >Login</Button>
+          <Typography textAlign="center" >Do't have an account?</Typography>
+
+          <Button href="/sign-up" color="primary" variant="outlined" size="md" >Sign Up</Button>
         </Stack>
       </Paper>
     </div>
