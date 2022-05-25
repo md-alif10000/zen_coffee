@@ -1,11 +1,17 @@
-.productCard{
-    display: flex;
-    padding: 20px;
+.productCard {
+  display: flex;
+  padding: 10px;
 }
-.productCard > div{
-    flex: 1;
+.productCard > div {
+  flex: 1;
+  padding: 5px;
+}
+.addCart {
+  margin: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .productCard {
     padding: 10px;
-}
-.addCart{
-    margin: 0 10px;
+  }
 }
