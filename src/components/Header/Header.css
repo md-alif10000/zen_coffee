@@ -8,14 +8,15 @@ header {
   top: 0;
   z-index: 99;
 }
- .sideDrawer{
+.sideDrawer {
   display: flex;
   flex-direction: column;
   width: 250px;
-  max-width: 250px!important;
-  padding: 20px;background-color: var(--dark);
+  max-width: 250px !important;
+  padding: 20px;
+  background-color: var(--dark);
   height: 100vh;
-  max-width: 100vh;
+  position: relative;
 }
 .header .container {
   display: flex;
@@ -30,7 +31,7 @@ header {
   display: flex;
   align-items: center;
 }
-.header .container .left .logo img{
+.header .container .left .logo img {
   height: 200px;
   width: auto;
 }
@@ -40,58 +41,58 @@ header {
   text-decoration: none;
   font-weight: 500;
 }
-.header .container .right{
-    justify-content: flex-end;
+.header .container .right {
+  justify-content: flex-end;
 }
 
-.header .container .right .cartIcon{
+.header .container .right .cartIcon {
   margin-right: 15px;
 }
 
-.menuIcon{
+.menuIcon {
   display: none;
   color: white;
   font-size: 24px;
 }
-@media screen and (max-width:600px) {
-  .header .container{
+.drawerClose {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  color: white;
+  font-size: 28px;
+}
+@media screen and (max-width: 600px) {
+  .header .container {
     padding: 10px;
-
   }
-  .header .container .left .logo img{
+  .header .container .left .logo img {
     height: 160px;
   }
-  .header .container .center{
+  .header .container .center {
     display: none;
   }
-  .menuIcon{
+  .menuIcon {
     display: inline-block;
   }
-  .header .container .right .MuiButton-root{
-    height: 40px!important;
-
-  
-}}
-
-@media screen and (max-width:380px) {
-  .header .container{
-    padding: 10px;
-
+  .header .container .right .MuiButton-root {
+    height: 40px !important;
   }
-  .header .container .left .logo img{
+}
+
+@media screen and (max-width: 380px) {
+  .header .container {
+    padding: 10px;
+  }
+  .header .container .left .logo img {
     height: 120px;
   }
-  .header .container .center{
+  .header .container .center {
     display: none;
   }
-  .menuIcon{
+  .menuIcon {
     display: inline-block;
   }
-  .header .container .right .MuiButton-root:last-child{
-  display: none;
-
-  
-}
-   
+  .header .container .right .MuiButton-root:last-child {
+    display: none;
   }
-  
+}

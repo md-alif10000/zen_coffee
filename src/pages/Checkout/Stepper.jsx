@@ -13,9 +13,6 @@ import StepConnector, {
   stepConnectorClasses,
 } from "@mui/material/StepConnector";
 
-
-
-
 const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
     top: 22,
@@ -23,13 +20,13 @@ const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
   [`&.${stepConnectorClasses.active}`]: {
     [`& .${stepConnectorClasses.line}`]: {
       backgroundImage:
-        "linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)",
+        "linear-gradient( 95deg,rgb(218, 210, 107) 0%,rgb(247, 215, 22) 50%,rgb(255, 210, 76) 100%)",
     },
   },
   [`&.${stepConnectorClasses.completed}`]: {
     [`& .${stepConnectorClasses.line}`]: {
       backgroundImage:
-        "linear-gradient( 95deg,rgb(242,113,33) 0%,rgb(233,64,87) 50%,rgb(138,35,135) 100%)",
+        "linear-gradient( 95deg,rgb(218, 210, 107) 0%,rgb(247, 215, 22) 50%,rgb(255, 210, 76) 100%)",
     },
   },
   [`& .${stepConnectorClasses.line}`]: {
@@ -54,12 +51,12 @@ const ColorlibStepIconRoot = styled("div")(({ theme, ownerState }) => ({
   alignItems: "center",
   ...(ownerState.active && {
     backgroundImage:
-      "linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)",
+      "linear-gradient( 95deg,rgb(218, 210, 107) 0%,rgb(247, 215, 22) 50%,rgb(255, 210, 76) 100%)",
     boxShadow: "0 4px 10px 0 rgba(0,0,0,.25)",
   }),
   ...(ownerState.completed && {
     backgroundImage:
-      "linear-gradient( 136deg, rgb(242,113,33) 0%, rgb(233,64,87) 50%, rgb(138,35,135) 100%)",
+      "linear-gradient( 95deg,rgb(218, 210, 107) 0%,rgb(247, 215, 22) 50%,rgb(255, 210, 76) 100%)",
   }),
 }));
 
@@ -106,12 +103,12 @@ const steps = [
   "Create an ad",
 ];
 
-export default function MyStepper() {
+export default function MyStepper({activeStep}) {
   return (
     <Stack sx={{ width: "100%" }} spacing={4}>
       <Stepper
         alternativeLabel
-        activeStep={1}
+        activeStep={activeStep}
         connector={<ColorlibConnector />}
       >
         {steps.map((label) => (

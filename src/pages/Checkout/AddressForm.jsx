@@ -1,7 +1,17 @@
 import { Grid, FormControl, TextField, Typography } from "@mui/material";
 import React from "react";
 
-const AddressForm = () => {
+const AddressForm = ({activeStep,setActiveStep}) => {
+
+
+  const submitHandler=()=>{
+
+    setActiveStep(activeStep+1)
+
+
+  }
+
+
   return (
     <>
       <Typography variant="h4" textAlign={"center"} gutterBottom>

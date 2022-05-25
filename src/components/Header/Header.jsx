@@ -4,6 +4,7 @@ import { AiOutlineShoppingCart } from "react-icons/ai";
 import { Button, Drawer, List, ListItem, Stack, Link } from "@mui/material";
 import WidgetsIcon from "@mui/icons-material/Widgets";
 import { Link as RouterLink } from "react-router-dom";
+import CloseIcon from '@mui/icons-material/Close';
 
 const Header = () => {
   const [drawerOpen, setdrawerOpen] = useState(false);
@@ -15,6 +16,10 @@ const Header = () => {
         onClose={() => setdrawerOpen(false)}
       >
         <div className="sideDrawer">
+          <div className="drawerClose" onClick={()=>setdrawerOpen(false)} >
+
+            <CloseIcon/>
+          </div>
           <div className="logo">
           <img src="./images/logo.svg" alt="" />
           </div>
