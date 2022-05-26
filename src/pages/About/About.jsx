@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout/Layout";
+import {Fade,Zoom,Bounce} from "react-reveal"
 import "./About.css";
 
 const About = () => {
@@ -7,10 +8,15 @@ const About = () => {
       <Layout footer={true}>
     <div className="about">
       <div className="story container">
-        <h1>About US</h1>
+      <Fade top>
+      <h1>About US</h1>
+        </Fade>
+
         <h3>Our Story</h3>
         <div className="content">
-          <p>
+
+        <Zoom>
+        <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
             eveniet voluptatem iure quam ad voluptatum! Quas illum repellat
             aspernatur temporibus debitis doloribus repudiandae expedita
@@ -22,10 +28,13 @@ const About = () => {
             reiciendis eligendi, numquam, odio molestiae tempore assumenda modi
             dolores! Quos, dolorum dicta. Illum, odio.
           </p>
+        </Zoom>
+     
         </div>
       </div>
       <div className="team container">
         <h1>Team</h1>
+        <Bounce bottom cascade>
         <div className="members">
           {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((member, index) => (
             <div className="member">
@@ -38,6 +47,7 @@ const About = () => {
             </div>
           ))}
         </div>
+        </Bounce>
       </div>
     </div>
     </Layout>

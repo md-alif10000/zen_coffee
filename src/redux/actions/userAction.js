@@ -138,6 +138,8 @@ export const updateProfile = (userData) => async (dispatch) => {
       config
     );
 
+    toast.success("Successfully Updated");
+
     dispatch({ type: UPDATE_PROFILE_SUCCESS, payload: data.success });
   } catch (error) {
     dispatch({

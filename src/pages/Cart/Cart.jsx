@@ -13,6 +13,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import Layout from "../../components/Layout/Layout";
+import { Slide,Fade  } from "react-reveal";
 import "./Cart.css";
 
 import CartItem from "./CartItem";
@@ -21,11 +22,13 @@ const Cart = () => {
     <Layout footer={true}>
       <div className="cart">
         <div className="container">
-          <div className="cartItems">
-            {[0, 1, 2, 3, 4, 5, 6].map((item, index) => (
-              <CartItem key={index} />
-            ))}
-          </div>
+          <Fade  left cascade>
+            <div className="cartItems">
+              {[0, 1, 2, 3, 4, 5, 6].map((item, index) => (
+                <CartItem key={index} />
+              ))}
+            </div>
+          </Fade >
           <div className="subTotal">
             <Paper elevation={2} className="subtotalContent">
               <Stack spacing={2}>
@@ -48,7 +51,9 @@ const Cart = () => {
                       />
 
                       <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-                        <InputLabel id="demo-select-small">Frequency</InputLabel>
+                        <InputLabel id="demo-select-small">
+                          Frequency
+                        </InputLabel>
                         <Select
                           labelId="demo-select-small"
                           id="demo-select-small"

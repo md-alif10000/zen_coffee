@@ -1,6 +1,7 @@
 import { Card, Divider, Grid, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import CartItem from "../Cart/CartItem";
+import { Fade } from "react-reveal";
 
 const Review = () => {
   const styles = {
@@ -9,25 +10,30 @@ const Review = () => {
 
   const Card = () => {
     return (
-      <Grid item xl={12} sm={12} xs={12} md={12}>
-        <Paper style={styles} elevation={0} >
-          <Stack direction={"row"} justifyContent="space-between">
-            <Stack>
-              <Typography variant="h6"> Coffee name </Typography>
-              <Typography variant="subtitle1" fontSize={"13px"} > QTY 10 </Typography>
+      <Grid xl={12} sm={12} xs={12} md={12}>
+      
+          <Paper style={styles} elevation={0}>
+            <Stack direction={"row"} justifyContent="space-between">
+              <Stack>
+                <Typography variant="h6"> Coffee name </Typography>
+                <Typography variant="subtitle1" fontSize={"13px"}>
+                  QTY 10{" "}
+                </Typography>
+              </Stack>
+              <Typography variant="h6" fontWeight={"500"}>
+                $253{" "}
+              </Typography>
             </Stack>
-            <Typography variant="h6" fontWeight={"500"}>
-              $253{" "}
-            </Typography>
-          </Stack>
-        </Paper>
+          </Paper>
+     
       </Grid>
     );
   };
 
   return (
+    <Fade cascade right>
     <div>
-      <Grid container spacing={1} marginBottom="10px" >
+      <Grid container spacing={1} marginBottom="10px">
         <Card />
         <Card />
         <Card />
@@ -51,6 +57,7 @@ const Review = () => {
         </Typography>
       </Stack>
     </div>
+    </Fade>
   );
 };
 

@@ -11,6 +11,8 @@ import SignUp from "./pages/SignUp/SignUp";
 import Checkout from "./pages/Checkout/Checkout";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Account from "./pages/Account/Account";
+import EditProfile from "./pages/EditProfile/EditProfile";
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/sign-up" element={<SignUp />} />
           <Route exact path="/checkout" element={<Checkout />} />
+          <Route exact path="/account" element={<Account />} />
+          <Route exact path="/edit-profile" element={<EditProfile />} />
         </Routes>
       </Router>
     </div>

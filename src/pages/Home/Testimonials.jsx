@@ -1,7 +1,7 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
 import "./Testimonials.css";
-
+import {Bounce,Zoom} from 'react-reveal'
 const Testimonials = () => {
   const breakPoints = [
     { width: 1, itemsToShow: 1 },
@@ -15,8 +15,10 @@ const Testimonials = () => {
     <div className="testimonials container">
       <h2>Testimonials</h2>
       <h4>People love this!</h4>
+      <Bounce cascade>
       <Carousel className="caurosel" breakPoints={breakPoints}>
         {[1, 2, 3, 4, 5].map((item) => (
+          <Zoom>
           <div to={"/"} className="testimonial" key={item.id}>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum
@@ -29,8 +31,10 @@ const Testimonials = () => {
               <h3 className="username">Md Morsalin Alif</h3>
             </div>
           </div>
+          </Zoom>
         ))}
       </Carousel>
+      </Bounce>
     </div>
   );
 };

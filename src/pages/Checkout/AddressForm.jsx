@@ -1,5 +1,6 @@
 import { Grid, FormControl, TextField, Typography } from "@mui/material";
 import React from "react";
+import {Fade} from 'react-reveal'
 
 const AddressForm = ({activeStep,setActiveStep}) => {
 
@@ -13,7 +14,7 @@ const AddressForm = ({activeStep,setActiveStep}) => {
 
 
   return (
-    <>
+    <Fade right>
       <Typography variant="h4" textAlign={"center"} gutterBottom>
         Shipping address
       </Typography>
@@ -79,7 +80,7 @@ const AddressForm = ({activeStep,setActiveStep}) => {
           />
         </Grid>
       </Grid>
-    </>
+    </Fade>
   );
 };
 

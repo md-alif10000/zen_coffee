@@ -5,6 +5,7 @@ import { Button, Drawer, List, ListItem, Stack, Link } from "@mui/material";
 import WidgetsIcon from "@mui/icons-material/Widgets";
 import { Link as RouterLink } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
+import {LightSpeed } from 'react-reveal'
 
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/actions/userAction";
@@ -69,6 +70,7 @@ const Header = () => {
             </RouterLink>
           </div>
         </div>
+        <LightSpeed top cascade>
         <div className="center">
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/shop">Shop</RouterLink>
@@ -77,6 +79,7 @@ const Header = () => {
           <RouterLink to="/contact">Contact</RouterLink>
           <RouterLink to="/">Wholesale</RouterLink>
         </div>
+        </LightSpeed>
         <div className="right">
           <RouterLink to={"/cart"} className="cartIcon">
             <AiOutlineShoppingCart className="icon" />

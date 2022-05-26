@@ -1,0 +1,15 @@
+.account{
+    width: 100vw;
+    height: calc(100vh - 80px);
+    display: flex;align-items: center;
+    justify-content: center;
+}
+.account > .content{
+    width: 100vw;
+    max-width: 1000px;
+
+
+}
+.paper{
+    min-height: 400px;
+}

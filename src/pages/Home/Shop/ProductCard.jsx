@@ -14,14 +14,17 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import React from "react";
+
 import "./ProductCard.css";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import {Zoom} from 'react-reveal'
 
 const ProductCard = () => {
   return (
+    <Zoom left cascade>
+
     <div>
       <Paper elevation={3} className="productCard">
         <div className="left">
@@ -79,6 +82,7 @@ const ProductCard = () => {
         </div>
       </Paper>
     </div>
+    </Zoom>
   );
 };
 

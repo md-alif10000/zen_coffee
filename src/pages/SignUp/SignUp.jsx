@@ -17,6 +17,7 @@ import { redirect, useNavigate, Navigate, Navigator } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import { register } from "../../redux/actions/userAction";
 import ProfileImage from "../../assets/profile.jpg";
+import { Zoom } from "react-reveal";
 
 import "../Login/Login.css";
 
@@ -115,103 +116,110 @@ const SignUp = ({ history, location }) => {
   return (
     <Layout footer={false}>
       <div className="login">
-        <Paper elevation={2} className="loginFormContainer">
-          <Box component="form" noValidate={false} autoComplete="off" fullWidth>
-            <Stack spacing={2} fullWidth>
-              <Typography variant="h3" textAlign={"center"}>
-                Sign Up
-              </Typography>
+        <Zoom>
+          <Paper elevation={2} className="loginFormContainer">
+            <Box
+              component="form"
+              noValidate={false}
+              autoComplete="off"
+              fullWidth
+            >
+              <Stack spacing={2} fullWidth>
+                <Typography variant="h3" textAlign={"center"}>
+                  Sign Up
+                </Typography>
 
-              <Stack alignItems={"center"}>
-                <Avatar
-                  style={{ alignSelf: "center" }}
-                  textAlign="center"
-                  alt="Remy Sharp"
-                  src={avatarPreview}
-                  sx={{ width: 76, height: 76 }}
+                <Stack alignItems={"center"}>
+                  <Avatar
+                    style={{ alignSelf: "center" }}
+                    textAlign="center"
+                    alt="Remy Sharp"
+                    src={avatarPreview}
+                    sx={{ width: 76, height: 76 }}
+                  />
+
+                  <label htmlFor="icon-button-file" textAlign={"center"}>
+                    <Input
+                      accept="image/*"
+                      id="icon-button-file"
+                      type="file"
+                      style={{ display: "none" }}
+                      name="avatar"
+                      onChange={registerDataChange}
+                    />
+                    <IconButton
+                      color="primary"
+                      aria-label="upload picture"
+                      component="span"
+                    >
+                      <PhotoCamera />
+                    </IconButton>
+                  </label>
+                </Stack>
+
+                <TextField
+                  fullWidth
+                  id="filled-hidden-label-normal"
+                  variant="filled"
+                  label="Full Name"
+                  name="name"
+                  onChange={registerDataChange}
+                  value={name}
+                  required
+                  error={!name}
                 />
 
-                <label htmlFor="icon-button-file" textAlign={"center"}>
-                  <Input
-                    accept="image/*"
-                    id="icon-button-file"
-                    type="file"
-                    style={{ display: "none" }}
-                    name="avatar"
-                    onChange={registerDataChange}
-                  />
-                  <IconButton
-                    color="primary"
-                    aria-label="upload picture"
-                    component="span"
-                  >
-                    <PhotoCamera />
-                  </IconButton>
-                </label>
+                <TextField
+                  error={!email}
+                  id="filled-hidden-label-normal"
+                  variant="filled"
+                  label="Email Address"
+                  name="email"
+                  onChange={registerDataChange}
+                  value={email}
+                />
+                <TextField
+                  error={!password}
+                  label="Password"
+                  id="filled-hidden-label-normal"
+                  variant="filled"
+                  name="password"
+                  onChange={registerDataChange}
+                  value={password}
+                />
+                <TextField
+                  error={!confirmPassword || password !== confirmPassword}
+                  label="Confirm Password"
+                  id="filled-hidden-label-normal"
+                  variant="filled"
+                  name="confirmPassword"
+                  value={confirmPassword}
+                  onChange={registerDataChange}
+                />
+
+                <Button
+                  color="primary"
+                  variant="contained"
+                  size="md"
+                  onClick={registerSubmit}
+                >
+                  Sign Up
+                </Button>
               </Stack>
+            </Box>
+            <Typography textAlign="center">Already have an account?</Typography>
 
-              <TextField
-                fullWidth
-                id="filled-hidden-label-normal"
-                variant="filled"
-                label="Full Name"
-                name="name"
-                onChange={registerDataChange}
-                value={name}
-                required
-                error={!name}
-              />
-
-              <TextField
-                error={!email}
-                id="filled-hidden-label-normal"
-                variant="filled"
-                label="Email Address"
-                name="email"
-                onChange={registerDataChange}
-                value={email}
-              />
-              <TextField
-                error={!password}
-                label="Password"
-                id="filled-hidden-label-normal"
-                variant="filled"
-                name="password"
-                onChange={registerDataChange}
-                value={password}
-              />
-              <TextField
-                error={!confirmPassword || password !== confirmPassword}
-                label="Confirm Password"
-                id="filled-hidden-label-normal"
-                variant="filled"
-                name="confirmPassword"
-                value={confirmPassword}
-                onChange={registerDataChange}
-              />
-
-              <Button
-                color="primary"
-                variant="contained"
-                size="md"
-                onClick={registerSubmit}
-              >
-                Sign Up
-              </Button>
-            </Stack>
-          </Box>
-          <Typography textAlign="center">Already have an account?</Typography>
-
-          <Button
-            fullWidth
-            color="primary"
-            href="/login"
-            variant="outlined"
-            size="md"
-          >
-            Login
-          </Button>
-        </Paper>
+            <Button
+              fullWidth
+              color="primary"
+              href="/login"
+              variant="outlined"
+              size="md"
+            >
+              Login
+            </Button>
+          </Paper>
+        </Zoom>
       </div>
     </Layout>
   );

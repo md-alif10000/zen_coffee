@@ -4,8 +4,10 @@ import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 import { Button, ButtonGroup, Paper, Stack } from "@mui/material";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import {Zoom} from 'react-reveal'
 const CartItem = () => {
   return (
+    <Zoom>
     <Paper elevation={2} className="cartItem">
       <h3 className="title">ZEN specialty coffee</h3>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
@@ -30,6 +32,7 @@ const CartItem = () => {
         </ButtonGroup>
       </div>
     </Paper>
+    </Zoom>
   );
 };
 

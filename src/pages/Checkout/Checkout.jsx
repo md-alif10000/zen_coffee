@@ -6,6 +6,7 @@ import AddressForm from "./AddressForm";
 import "./Checkout.css";
 import Review from "./Review";
 import MyStepper from "./Stepper";
+import {Zoom} from 'react-reveal'
 
 const Checkout = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -30,6 +31,7 @@ const Checkout = () => {
   return (
     <Layout>
       <div className="checkout">
+        <Zoom>
         <Paper
           className="checkoutContainer"
           elevation={3}
@@ -51,6 +53,7 @@ const Checkout = () => {
             </Button>
           </Stack>
         </Paper>
+        </Zoom>
       </div>
     </Layout>
   );
