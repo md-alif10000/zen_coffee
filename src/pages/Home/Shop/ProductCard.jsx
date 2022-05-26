@@ -4,10 +4,14 @@ import {
   FormControl,
   FormControlLabel,
   FormLabel,
+  InputLabel,
+  MenuItem,
   Paper,
   Radio,
   RadioGroup,
+  Select,
   Stack,
+  TextField,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -26,28 +30,21 @@ const ProductCard = () => {
             <p>Lorem ipsum dolor sit amet consectetur.</p>
 
             <FormControl>
-
-              <Typography variant="body1" fontWeight={600} >    Grind Size</Typography>
-          
-              <RadioGroup
-                row
+              <InputLabel id="demo-simple-select-helper-label">
+                Grind Size
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                // value={age}
+                label="Grind Size"
+                // onChange={handleChange}
                 size="small"
-                aria-labelledby="demo-row-radio-buttons-group-label"
-                name="row-radio-buttons-group"
               >
-                <FormControlLabel
-                  value="whole"
-                  control={<Radio size="small" />}
-                  label="Whole "
-                />
-                <FormControlLabel
-                  value="ground"
-                  control={<Radio size="small" />}
-                  label="Ground"
-                />
-              </RadioGroup>
+                <MenuItem value={10}>Whole Bean</MenuItem>
+                <MenuItem value={20}>Grounded</MenuItem>
+              </Select>
             </FormControl>
-
             <ButtonGroup
               color="secondary"
               variant="contained"

@@ -6,7 +6,12 @@ import WidgetsIcon from "@mui/icons-material/Widgets";
 import { Link as RouterLink } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux/actions/userAction";
+
 const Header = () => {
+  const dispatch = useDispatch();
+  const { isAuthenticated,user } = useSelector((state) => state.user);
   const [drawerOpen, setdrawerOpen] = useState(false);
   return (
     <header className="header">
@@ -78,12 +83,26 @@ const Header = () => {
           </RouterLink>
 
           <Stack spacing={2} direction="row">
-            <Button href="/login" variant="contained">
-              <span className="btnText">Login</span>
-            </Button>
-            <Button href="/sign-up" variant="contained">
-              <span className="btnText">Sign up</span>
-            </Button>
+            {isAuthenticated ? (
+              <>
+                <Button variant="text" href="/account">
+                  <span className="btnText"> Hi, {user.name}</span>
+                </Button>
+
+                <Button variant="contained" onClick={() => dispatch(logout())}>
+                  <span className="btnText">Logout</span>
+                </Button>
+              </>
+            ) : (
+              <>
+                <Button href="/login" variant="contained">
+                  <span className="btnText">Login</span>
+                </Button>
+                <Button href="/sign-up" variant="contained">
+                  <span className="btnText">Sign up</span>
+                </Button>
+              </>
+            )}
           </Stack>
         </div>
       </div>

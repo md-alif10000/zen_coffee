@@ -2,12 +2,12 @@ import React from "react";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, footer }) => {
   return (
     <>
       <Header />
       {children}
-      <Footer />
+      {footer && <Footer />}
     </>
   );
 };

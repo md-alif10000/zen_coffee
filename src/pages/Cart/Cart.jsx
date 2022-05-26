@@ -18,7 +18,7 @@ import "./Cart.css";
 import CartItem from "./CartItem";
 const Cart = () => {
   return (
-    <Layout>
+    <Layout footer={true}>
       <div className="cart">
         <div className="container">
           <div className="cartItems">

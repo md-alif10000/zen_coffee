@@ -7,6 +7,9 @@ import reportWebVitals from "./reportWebVitals";
 import { createTheme } from "@mui/material/styles";
 import { green, purple } from "@mui/material/colors";
 import { ThemeProvider } from "@mui/material";
+import { Provider } from "react-redux";
+
+import store from "./redux/store";
 
 const theme = createTheme({
   palette: {
@@ -30,12 +33,11 @@ const theme = createTheme({
     button: {
       fontWeight: 600,
     },
-    h3:{
+    h3: {
       fontWeight: 700,
-      textTransform:"uppercase",
-      letterSpacing:"2"
-
-    }
+      textTransform: "uppercase",
+      letterSpacing: "2",
+    },
   },
 });
 
@@ -43,7 +45,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <App />
+      <Provider store={store}>
+        <App />
+      </Provider>
     </ThemeProvider>
   </React.StrictMode>
 );

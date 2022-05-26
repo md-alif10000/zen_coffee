@@ -4,7 +4,7 @@ import "./About.css";
 
 const About = () => {
   return (
-      <Layout>
+      <Layout footer={true}>
     <div className="about">
       <div className="story container">
         <h1>About US</h1>

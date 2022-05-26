@@ -15,7 +15,7 @@ body {
   padding: 0;
   overflow-y: scroll;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
