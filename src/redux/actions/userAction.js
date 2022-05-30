@@ -1,4 +1,4 @@
-import { backend_api } from "../../utils/backend_api";
+import { backend_api } from "../utils/backend_api";
 import {
   LOGIN_REQUEST,
   LOGIN_FAIL,
@@ -37,7 +37,7 @@ import {
   USER_DETAILS_FAIL,
   CLEAR_ERRORS,
 } from "../constants/userConstants";
-import axios from "../../utils/backend_api";
+import axios from "../utils/backend_api";
 import { toast } from "react-toastify";
 
 // Login

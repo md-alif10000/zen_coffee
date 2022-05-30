@@ -1,4 +1,4 @@
-import axios from "../utils/backend_api";
+import axios,{backend_api} from "../utils/backend_api";
 
 import {
   ALL_PRODUCT_FAIL,
@@ -30,7 +30,7 @@ import {
   DELETE_REVIEW_FAIL,
   CLEAR_ERRORS,
 } from "../constants/productConstants";
-import { backend_api } from "../utils/backend_api";
+
 
 // Get All Products
 export const getProduct =

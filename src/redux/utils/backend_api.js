@@ -1,10 +1,11 @@
 import axios from "axios";
-import store from "../redux/store";
+import store from "../store";
 // import { authConstants } from "../actions/constants";
 
-
 // const token = window.localStorage.getItem("token");
-export const backend_api = "http://localhost:4000";
+// export const backend_api = "http://localhost:4000";
+export const backend_api = "https://zencoffee.herokuapp.com";
+
 const token = localStorage.getItem("token");
 
 console.log(token);

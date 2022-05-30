@@ -19,7 +19,7 @@ const Blogs = () => {
         <h2 className="title">BLOGS</h2>
       <Carousel className="caurosel" breakPoints={breakPoints}>
         {[1, 2, 3, 4, 5].map((item) => (
-          <Link to={"/"} className="blog" key={item.id}>
+          <Link to={"/blog/2523"} className="blog" key={item.id}>
             <div className="top">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS90WegmW0YiSBJDXgBngc36uEK3X5YLnxLzw&usqp=CAU"
