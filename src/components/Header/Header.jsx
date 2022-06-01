@@ -13,6 +13,7 @@ import { logout } from "../../redux/actions/userAction";
 const Header = () => {
   const dispatch = useDispatch();
   const { isAuthenticated,user } = useSelector((state) => state.user);
+  const {cartItems } = useSelector((state) => state.cart);
   const [drawerOpen, setdrawerOpen] = useState(false);
   return (
     <header className="header">
@@ -83,6 +84,9 @@ const Header = () => {
         <div className="right">
           <RouterLink to={"/cart"} className="cartIcon">
             <AiOutlineShoppingCart className="icon" />
+            <div className="cartCount" >
+              {cartItems?.length}
+            </div>
           </RouterLink>
 
           <Stack spacing={2} direction="row">

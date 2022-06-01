@@ -10,26 +10,35 @@ import {
   Select,
   Button,
   InputLabel,
+  Typography,
 } from "@mui/material";
 import React from "react";
 import Layout from "../../components/Layout/Layout";
-import { Slide,Fade  } from "react-reveal";
+import { Slide, Fade } from "react-reveal";
 import "./Cart.css";
 
 import CartItem from "./CartItem";
+import { useSelector } from "react-redux";
 const Cart = () => {
+  const { cartItems } = useSelector((state) => state.cart);
+
   return (
     <Layout footer={true}>
       <div className="cart">
         <div className="container">
-          <Fade  left cascade>
+          {cartItems.length ==0 &&  <div className="emptyCart">
+            <Typography variant="h4" fontWeight={"bold"} >No Coffes Found</Typography>
+          <Button href="/shop"  style={{margin:"20px"}} variant="contained">Visit Shop</Button>
+          </div> }
+          {cartItems.length > 0 &&   <Fade left cascade>
             <div className="cartItems">
-              {[0, 1, 2, 3, 4, 5, 6].map((item, index) => (
-                <CartItem key={index} />
+              {cartItems.map((item, index) => (
+                <CartItem key={index} item={item} />
               ))}
             </div>
-          </Fade >
-          <div className="subTotal">
+          </Fade>}
+
+          {cartItems.length > 0 && <div className="subTotal">
             <Paper elevation={2} className="subtotalContent">
               <Stack spacing={2}>
                 <FormControl size="small">
@@ -78,7 +87,9 @@ const Cart = () => {
                 </Button>
               </Stack>
             </Paper>
-          </div>
+          </div>}
+        
+          
         </div>
       </div>
     </Layout>
