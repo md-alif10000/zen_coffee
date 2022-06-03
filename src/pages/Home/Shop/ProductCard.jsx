@@ -26,28 +26,29 @@ const ProductCard = ({ item }) => {
 
   const dispatch = useDispatch();
 
-  const addItemToCart = (product) => {
+  const addItemToCart = () => {
     if (!grindSize) {
       return toast.warn("Please select grind size");
     }
 
-    dispatch(addItemsToCart({ ...item, quantity, grindSize }));
+    dispatch(
+      addItemsToCart({ ...item, product: item._id, quantity, grindSize })
+    );
   };
   return (
-    <Zoom  cascade>
+    <Zoom cascade>
       <div>
         <Paper elevation={3} className="productCard">
           <div className="left">
             <Stack spacing={1}>
               <h3>{item.name}</h3>
               <p>{item.shortDescription}</p>
-              <Stack direction={"row"}  alignItems="center" >
+              <Stack direction={"row"} alignItems="center">
                 <Typography variant="" fontSize={"18px"} fontWeight={"bold"}>
-                  Price: 
+                  Price:
                 </Typography>
                 <Typography variant="h6" color={"primary"}>
-                  {"  "}
-                   $ {item.price}{" "}
+                  {"  "}$ {item.price}{" "}
                 </Typography>
               </Stack>
 

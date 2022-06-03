@@ -1,0 +1,21 @@
+.orders {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.ordersContainer {
+  width: 95vw;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+.order {
+  width: 100vw;
+  min-height: 100vh;
+}
+.orderContainer {
+  padding: 20px;
+  width: 95vw;
+  max-width: 800px;
+  margin: 20px auto;
+}

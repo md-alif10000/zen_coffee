@@ -14,6 +14,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Account from "./pages/Account/Account";
 import EditProfile from "./pages/EditProfile/EditProfile";
 import SingleBlog from "./pages/Blog/SingleBlog";
+import Orders from "./pages/Order/Orders";
+import OrderDetails from "./pages/Order/OrderDetails";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
           <Route exact path="/account" element={<Account />} />
           <Route exact path="/edit-profile" element={<EditProfile />} />
           <Route exact path="/blog/:id" element={<SingleBlog />} />
+          <Route exact path="/orders" element={<Orders />} />
+          <Route exact path="/orders/:id" element={<OrderDetails />} />
         </Routes>
       </Router>
     </div>

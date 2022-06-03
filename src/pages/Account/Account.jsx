@@ -7,19 +7,21 @@ import Layout from "../../components/Layout/Layout";
 import { Box } from "@mui/system";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/actions/userAction";
+import { Link } from "react-router-dom";
 const Account = () => {
   const { user } = useSelector((state) => state.user);
 
   const dispatch = useDispatch();
   const boxStyle = {
+    height: "100px",
     borderRadius: "20px",
     padding: "20px",
-    backgroundColor: "primary.dark",
+    backgroundColor: "primary.main",
     "&:hover": {
       backgroundColor: "primary.main",
-      opacity: [0.9, 0.8, 0.7],
     },
   };
+
   return (
     <Layout>
       <div className="account">
@@ -33,7 +35,7 @@ const Account = () => {
               >
                 <Stack alignItems={"center"} spacing={2}>
                   <Avatar
-                  alt="profile picture"
+                    alt="profile picture"
                     src={user.avatar.url}
                     style={{ width: "100px", height: "100px" }}
                     elevation={2}
@@ -67,15 +69,18 @@ const Account = () => {
               >
                 <Grid container spacing={3}>
                   <Grid item xs={6}>
-                    <Box component={""} href="/orders" sx={boxStyle}>
-                      Orders
-                    </Box>
+                    <Link to="/orders">
+                      <Box sx={boxStyle} textAlign="center">
+                        <Typography variant="h6"> Orders </Typography>
+                      </Box>
+                    </Link>
                   </Grid>
                   <Grid item xs={6}>
-                    <Box sx={boxStyle}>Change Password</Box>
-                  </Grid>
-                  <Grid item xs={6}>
-                    <Box sx={boxStyle}>Change Password</Box>
+                    <Link to="/change-password">
+                      <Box sx={boxStyle} textAlign="center">
+                        <Typography variant="h6"> Change Password </Typography>
+                      </Box>
+                    </Link>
                   </Grid>
                 </Grid>
               </Paper>
