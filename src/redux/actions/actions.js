@@ -6,18 +6,19 @@ import {
   DELETE_SECTION_FAILURE,
   DELETE_SECTION_REQUEST,
   DELETE_SECTION_SUCCESS,
+  frequencyConstants,
   GET_CATEGORY_FAILURE,
   GET_CATEGORY_REQUEST,
   GET_CATEGORY_SUCCESS,
   GET_SECTIONS_FAILURE,
   GET_SECTIONS_REQUEST,
   GET_SECTIONS_SUCCESS,
-} from "../constants/categoryConstants";
+} from "../constants/conatants";
 import axios, { backend_api } from "../utils/backend_api";
 
-export const getCategories = () => async (dispatch) => {
+export const getFrequency = () => async (dispatch) => {
   try {
-    dispatch({ type: GET_CATEGORY_REQUEST });
+    dispatch({ type: frequencyConstants.GET_FREQUENCY_REQUEST });
 
     const config = {
       headers: { "Content-Type": "application/json" },
@@ -25,17 +26,20 @@ export const getCategories = () => async (dispatch) => {
     };
 
     const { data } = await axios.get(
-      `${backend_api}/api/v1/category`,
+      `${backend_api}/api/v1/frequency`,
 
       config
     );
 
-    dispatch({ type: GET_CATEGORY_SUCCESS, payload: data.categories });
+    dispatch({
+      type: frequencyConstants.GET_FREQUENCY_SUCCESS,
+      payload: data.frequency,
+    });
   } catch (error) {
     console.log(error);
 
     dispatch({
-      type: GET_CATEGORY_FAILURE,
+      type: frequencyConstants.GET_FREQUENCY_FAILURE,
       payload: error?.response?.data.message,
     });
   }
@@ -152,7 +156,7 @@ export const deleteSection = (id) => async (dispatch) => {
     toast.success("Successfully Deleted");
 
     getSections();
-    getCategories();
+
   } catch (error) {
     dispatch({
       type: DELETE_SECTION_FAILURE,
@@ -177,7 +181,7 @@ export const deleteCategory = (id) => async (dispatch) => {
       type: DELETE_SECTION_SUCCESS,
     });
     toast.success("Successfully Deleted");
-    getCategories();
+
   } catch (error) {
     dispatch({
       type: DELETE_SECTION_FAILURE,

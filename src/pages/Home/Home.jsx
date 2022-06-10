@@ -6,18 +6,32 @@ import Blogs from "./Blogs";
 import "./Home.css";
 import Testimonials from "./Testimonials";
 import { Zoom,Bounce,LightSpeed } from "react-reveal";
+import ReactElasticCarousel from "react-elastic-carousel";
+import Carousel from 'react-material-ui-carousel'
 
 const Home = () => {
   return (
     <div>
       <Header />
-    
+
+
+      <Carousel  indicators={false}  animation={"slide"}  >
       <div className="banner">
         <img
           src="https://thumbs.dreamstime.com/b/coffee-banner-collage-espresso-beans-51189295.jpg"
           alt=""
         />
       </div>
+      <div className="banner">
+        <img
+          src="https://thumbs.dreamstime.com/b/coffee-banner-collage-espresso-beans-51189295.jpg"
+          alt=""
+        />
+      </div>
+
+      </Carousel>
+    
+      
      
 
       <div className="specialities container">

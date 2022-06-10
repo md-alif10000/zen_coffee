@@ -97,13 +97,9 @@ ColorlibStepIcon.propTypes = {
   icon: PropTypes.node,
 };
 
-const steps = [
-  "Select campaign settings",
-  "Create an ad group",
-  "Create an ad",
-];
+const steps = ["Shipping Details", "Review", "Place Order"];
 
-export default function MyStepper({activeStep}) {
+export default function MyStepper({ activeStep }) {
   return (
     <Stack sx={{ width: "100%" }} spacing={4}>
       <Stepper

@@ -36,7 +36,7 @@ const Account = () => {
                 <Stack alignItems={"center"} spacing={2}>
                   <Avatar
                     alt="profile picture"
-                    src={user.avatar.url}
+                    src={user.avatar?.url}
                     style={{ width: "100px", height: "100px" }}
                     elevation={2}
                   />

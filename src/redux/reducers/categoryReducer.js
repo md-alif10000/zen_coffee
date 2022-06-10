@@ -3,7 +3,7 @@ import {
   GET_CATEGORY_SUCCESS,
   GET_SECTIONS_CATEGORIES_SUCCESS,
   GET_SECTIONS_SUCCESS,
-} from "../constants/categoryConstants";
+} from "../constants/conatants";
 
 const initState = {
   categories: [],

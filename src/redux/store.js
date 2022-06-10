@@ -28,9 +28,11 @@ import {
   orderReducer,
 } from "./reducers/orderReducer";
 import { categoryreducer } from "./reducers/categoryReducer";
+import { frequencyReducer } from "./reducers/frequencyReducer";
 
 const reducer = combineReducers({
   products: productsReducer,
+  frequency: frequencyReducer,
   categories: categoryreducer,
   productDetails: productDetailsReducer,
   user: userReducer,

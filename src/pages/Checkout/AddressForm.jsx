@@ -32,7 +32,7 @@ const AddressForm = ({ activeStep, setActiveStep }) => {
     if (!shippingDetails.phoneNo) {
       return toast.warn("Phone number is required");
     }
-    if (!shippingDetails.phoneNo) {
+    if (!shippingDetails.streetAddress) {
       return toast.warn("Street address is required");
     }
 

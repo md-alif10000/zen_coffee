@@ -1,6 +1,5 @@
 import React from "react";
 import "./Cart.css";
-import { BsChevronUp, BsChevronDown } from "react-icons/bs";
 import { Button, ButtonGroup, Paper, Stack } from "@mui/material";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";

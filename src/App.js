@@ -10,14 +10,25 @@ import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import Checkout from "./pages/Checkout/Checkout";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import Account from "./pages/Account/Account";
 import EditProfile from "./pages/EditProfile/EditProfile";
 import SingleBlog from "./pages/Blog/SingleBlog";
 import Orders from "./pages/Order/Orders";
 import OrderDetails from "./pages/Order/OrderDetails";
+import OrderSuccess from "./pages/Checkout/OrderSuccess";
+import { getFrequency } from "./redux/actions/actions";
+import { useDispatch } from "react-redux";
+import { getProduct } from "./redux/actions/productAction";
+import { useEffect } from "react";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProduct());
+    dispatch(getFrequency());
+  }, []);
+
   return (
     <div className="App">
       <ToastContainer />
@@ -32,6 +43,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/sign-up" element={<SignUp />} />
           <Route exact path="/checkout" element={<Checkout />} />
+          <Route exact path="/order-success" element={<OrderSuccess />} />
           <Route exact path="/account" element={<Account />} />
           <Route exact path="/edit-profile" element={<EditProfile />} />
           <Route exact path="/blog/:id" element={<SingleBlog />} />

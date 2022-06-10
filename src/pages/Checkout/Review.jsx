@@ -14,7 +14,7 @@ const Review = () => {
     0
   );
   const vatParcent = 14;
-  const vat = subtotal * vatParcent * 0.01;
+  const vat = (subtotal * vatParcent * 0.01).toFixed(2);
   const shippingCharge = subtotal > 650 ? 0 : 30;
   const totalPrice = subtotal + vat + shippingCharge;
 

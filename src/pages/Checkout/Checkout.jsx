@@ -10,12 +10,17 @@ import { Zoom } from "react-reveal";
 import { useDispatch, useSelector } from "react-redux";
 import { createOrder } from "../../redux/actions/orderAction";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const Checkout = () => {
   const [activeStep, setActiveStep] = useState(0);
   const { cartItems, shippingInfo } = useSelector((state) => state.cart);
   const { user, isAuthenticated } = useSelector((state) => state.user);
+  const { success } = useSelector((state) => state.newOrder);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   //  const [order, setorder] = useState({});
 
   const subtotal = cartItems.reduce(
@@ -43,6 +48,12 @@ const Checkout = () => {
 
     dispatch(createOrder(order));
   };
+
+  useEffect(() => {
+    if (success) {
+      return navigate("/order-success");
+    }
+  }, [success]);
 
   const activeStepComponent = () => {
     switch (activeStep) {
